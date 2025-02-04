@@ -1,0 +1,55 @@
+import EditListSelectionButtons from "./EditListSelectionButtons.jsx";
+import EditItemPositionInList from "./EditItemPositionInList.jsx";
+import ArrayOfInputWithLabel from "../base/ArrayOfInputWithLabel.jsx";
+import inputProperties from "../../data/inputProperties.json";
+import "../../styles/editor/EditSectionPanel.css";
+import useCurrentItemOfArray from "../../customHooks/useCurrentItemOfArray.js";
+
+const orderedInputProps = ["heading", "text"];
+const inputProps = inputProperties.languages;
+
+function EditLanguagesPanel({ languages, setLanguages }) {
+  const itemData = useCurrentItemOfArray(
+    languages,
+    setLanguages,
+    ["allIds"],
+    ["byId"]
+  );
+
+  return (
+    <div
+      className={`edit-section-panel edit-languages-panel ${itemData.emptyItemClass}`}
+    >
+      <h3>Edit Languages</h3>
+      <div>
+        <EditListSelectionButtons
+          list={languages.allIds}
+          getLabel={(id) => languages.byId[id].heading}
+          currentItemId={itemData.currentItemId}
+          setCurrentItemId={itemData.setCurrentItemId}
+          emptyListText={"Insert new items"}
+          newItemCallback={itemData.newItemCallback}
+        />
+
+        {itemData.validItem && (
+          <>
+            <EditItemPositionInList
+              deleteItemCallback={itemData.deleteItemCallback}
+              moveItemBackCallback={itemData.moveItemBackCallback}
+              moveItemForthCallback={itemData.moveItemForthCallback}
+            />
+            <form>
+              <ArrayOfInputWithLabel
+                {...{ orderedInputProps, inputProps }}
+                item={itemData.currentItem}
+                setValueFor={itemData.setValueForCallback}
+              />
+            </form>
+          </>
+        )}
+      </div>
+    </div>
+  );
+}
+
+export default EditLanguagesPanel;

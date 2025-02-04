@@ -1,0 +1,25 @@
+.edit-item-position-in-list-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: calc(var(--editor-section-button-item-gap-small));
+}
+
+.edit-item-position-in-list-button {
+  --button-col: var(--col-txt);
+  --button-col-hover: var(--edit-section-highlight-color-secondary);
+  --button-bg-col: var(--editor-section-bg-col);
+  --button-shadow-hover: none;
+  --button-radius: 50%;
+  --button-padding: var(--editor-section-button-item-padding);
+  --button-size: var(--editor-section-button-icon-size);
+
+  aspect-ratio: 1;
+  min-height: 0;
+}
+
+/* hide if item is empty (no item to edit) */
+.empty-item > .edit-item-position-in-list-buttons {
+  visibility: hidden;
+  pointer-events: none;
+}

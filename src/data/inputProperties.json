@@ -1,0 +1,636 @@
+{
+  "personalInfo": {
+    "name": {
+      "label": "Name",
+      "maxLength": 20,
+      "required": true,
+      "type": "text",
+      "placeholder": "John"
+    },
+    "surname": {
+      "label": "Surname",
+      "maxLength": 20,
+      "required": true,
+      "type": "text",
+      "placeholder": "Doe"
+    },
+    "title": {
+      "label": "Title",
+      "maxLength": 50,
+      "required": false,
+      "type": "text",
+      "placeholder": "Fullstack Web Developer"
+    },
+    "aboutMe": {
+      "label": "About Me",
+      "maxLength": 500,
+      "required": false,
+      "type": "textarea",
+      "placeholder": "I am ..."
+    },
+    "photo": {
+      "label": "Photo",
+      "required": false,
+      "type": "file",
+      "accept": "image/png, image/jpeg",
+      "maxFileSizeInMb": 3
+    },
+    "location": {
+      "label": "Location",
+      "maxLength": 60,
+      "required": false,
+      "type": "text",
+      "placeholder": "Random Place, Random Country"
+    },
+    "email": {
+      "label": "Email",
+      "maxLength": 50,
+      "required": false,
+      "type": "email",
+      "placeholder": "johndoe@example.com"
+    },
+    "phone": {
+      "label": "Phone",
+      "maxLength": 20,
+      "required": false,
+      "type": "tel",
+      "placeholder": "000-000-0000"
+    },
+    "linkedin": {
+      "label": "Linkedin",
+      "maxLength": 50,
+      "required": false,
+      "type": "text",
+      "placeholder": "linkedin.com/in/johndoe.is.not.real"
+    },
+    "website": {
+      "label": "Website",
+      "maxLength": 50,
+      "required": false,
+      "type": "text",
+      "placeholder": "johndoe.example.com"
+    },
+    "github": {
+      "label": "Github",
+      "maxLength": 50,
+      "required": false,
+      "type": "text",
+      "placeholder": "github.com/johndoe.is.not.real"
+    }
+  },
+  "education": {
+    "degree": {
+      "label": "Degree",
+      "maxLength": 50,
+      "required": true,
+      "type": "text",
+      "placeholder": "B.Sc. in Software Engineering"
+    },
+    "institution": {
+      "label": "Institution",
+      "maxLength": 50,
+      "required": true,
+      "type": "text",
+      "placeholder": "University of Random City"
+    },
+    "address": {
+      "label": "Address",
+      "maxLength": 50,
+      "required": true,
+      "type": "text",
+      "placeholder": "Random City"
+    },
+    "fromToDate": {
+      "type": "date-month-year-interval",
+      "fromDateProp": "fromDate",
+      "toDateProp": "toDate"
+    },
+    "fromDate": {
+      "type": "date-month-year",
+      "label": "From",
+      "required": true
+    },
+    "toDate": {
+      "type": "date-month-year",
+      "label": "To",
+      "required": true
+    },
+    "ongoing": {
+      "type": "checkbox",
+      "label": "Ongoing",
+      "required": false
+    },
+    "otherInfo": {
+      "type": "other-info",
+      "heading": "otherInfoHeading",
+      "text": "otherInfoText"
+    },
+    "otherInfoHeading": {
+      "maxLength": 50,
+      "required": false,
+      "type": "text",
+      "placeholder": "Thesis (optional heading)",
+      "prop": "heading",
+      "text": "Heading"
+    },
+    "otherInfoText": {
+      "maxLength": 500,
+      "required": true,
+      "type": "textarea",
+      "placeholder": "Lorem ipsum dolor sit amet",
+      "prop": "text",
+      "text": "Description"
+    }
+  },
+  "professionalExperience": {
+    "role": {
+      "label": "Role",
+      "maxLength": 50,
+      "required": true,
+      "type": "text",
+      "placeholder": "Software Engineer"
+    },
+    "institution": {
+      "label": "Institution",
+      "maxLength": 50,
+      "required": true,
+      "type": "text",
+      "placeholder": "Random Company"
+    },
+    "address": {
+      "label": "Address",
+      "maxLength": 50,
+      "required": true,
+      "type": "text",
+      "placeholder": "Random City"
+    },
+    "fromToDate": {
+      "type": "date-month-year-interval",
+      "fromDateProp": "fromDate",
+      "toDateProp": "toDate"
+    },
+    "fromDate": {
+      "type": "date-month-year",
+      "label": "From",
+      "required": true
+    },
+    "toDate": {
+      "type": "date-month-year",
+      "label": "To",
+      "required": true
+    },
+    "ongoing": {
+      "type": "checkbox",
+      "label": "Ongoing",
+      "required": false
+    },
+    "otherInfo": {
+      "type": "other-info",
+      "heading": "otherInfoHeading",
+      "text": "otherInfoText"
+    },
+    "otherInfoHeading": {
+      "maxLength": 50,
+      "required": false,
+      "type": "text",
+      "placeholder": "Responsibilities  (optional)",
+      "prop": "heading",
+      "text": "Heading"
+    },
+    "otherInfoText": {
+      "maxLength": 500,
+      "required": true,
+      "type": "textarea",
+      "placeholder": "Lorem ipsum dolor sit amet",
+      "prop": "text",
+      "text": "Description"
+    }
+  },
+  "skills": {
+    "heading": {
+      "maxLength": 50,
+      "required": true,
+      "type": "text",
+      "placeholder": "Frontend Development",
+      "prop": "heading",
+      "label": "Category"
+    },
+    "text": {
+      "maxLength": 500,
+      "required": false,
+      "type": "textarea",
+      "placeholder": "Javascript, React, CSS, HTML",
+      "prop": "text",
+      "label": "Details"
+    }
+  },
+  "languages": {
+    "heading": {
+      "maxLength": 50,
+      "required": true,
+      "type": "text",
+      "placeholder": "English",
+      "prop": "heading",
+      "label": "Language"
+    },
+    "text": {
+      "maxLength": 500,
+      "required": false,
+      "type": "textarea",
+      "placeholder": "Professional knowledge (C1 level)",
+      "prop": "text",
+      "label": "Details"
+    }
+  },
+  "coursesAndCertificates": {
+    "name": {
+      "label": "Name",
+      "maxLength": 50,
+      "required": true,
+      "type": "text",
+      "placeholder": "B.Sc. in Software Engineering"
+    },
+    "issuer": {
+      "label": "Issuer",
+      "maxLength": 50,
+      "required": true,
+      "type": "text",
+      "placeholder": "University of Random City"
+    },
+    "address": {
+      "label": "Address",
+      "maxLength": 50,
+      "required": false,
+      "type": "text",
+      "placeholder": "Random City"
+    },
+    "date": {
+      "type": "date-month-year-single",
+      "label": "Date",
+      "required": true
+    },
+    "ongoing": {
+      "type": "checkbox",
+      "label": "Ongoing",
+      "required": false
+    },
+    "description": {
+      "maxLength": 500,
+      "required": false,
+      "type": "textarea",
+      "placeholder": "Lorem ipsum dolor sit amet",
+      "prop": "text",
+      "label": "Description"
+    }
+  },
+  "personalization": {
+    "format": {
+      "required": true,
+      "type": "select",
+      "label": "Format",
+      "options": ["A4", "Letter"]
+    },
+    "pageTbPadding": {
+      "label": "Page Top & Bottom Margin",
+      "required": false,
+      "type": "range",
+      "min": 1,
+      "max": 15,
+      "step": 0.05
+    },
+    "pageLrPadding": {
+      "label": "Page Left & Right Margin",
+      "required": false,
+      "type": "range",
+      "min": 1,
+      "max": 15,
+      "step": 0.05
+    },
+    "pageGap": {
+      "label": "Page Gap",
+      "required": false,
+      "type": "range",
+      "min": 1,
+      "max": 5,
+      "step": 0.05
+    },
+    "personalInfoGap": {
+      "label": "Personal Info Gap",
+      "required": false,
+      "type": "range",
+      "min": 1,
+      "max": 5,
+      "step": 0.05
+    },
+    "sectionItemsGap": {
+      "label": "Section Items Gap",
+      "required": false,
+      "type": "range",
+      "min": 0,
+      "max": 3,
+      "step": 0.05
+    },
+    "sectionListGap": {
+      "label": "Section List Gap",
+      "required": false,
+      "type": "range",
+      "min": 0,
+      "max": 3,
+      "step": 0.05
+    },
+    "contactsTbPadding": {
+      "label": "Contacts Top & Bottom Padding",
+      "required": false,
+      "type": "range",
+      "min": 1,
+      "max": 7,
+      "step": 0.05
+    },
+    "contactsLrPadding": {
+      "label": "Contacts Left & Right Padding",
+      "required": false,
+      "type": "range",
+      "min": 1,
+      "max": 15,
+      "step": 0.05
+    },
+    "contactsVGap": {
+      "label": "Contacts Gap",
+      "required": false,
+      "type": "range",
+      "min": 0,
+      "max": 3,
+      "step": 0.05
+    },
+    "mainFont": {
+      "required": true,
+      "type": "select",
+      "label": "Main Font",
+      "options": [
+        "Poppins",
+        "Fira Sans",
+        "Montserrat",
+        "Raleway",
+        "Rubik",
+        "Saira",
+        "Blinker",
+        "Bitter",
+        "Lora",
+        "Playfair Display",
+        "Fira Code",
+        "Courier Prime",
+        "Source Code Pro",
+        "Playwrite IS",
+        "Fira Sans Condensed",
+        "Saira Condensed"
+      ]
+    },
+    "headingFont": {
+      "required": true,
+      "type": "select",
+      "label": "Headings Font",
+      "options": [
+        "Poppins",
+        "Fira Sans",
+        "Montserrat",
+        "Raleway",
+        "Rubik",
+        "Saira",
+        "Blinker",
+        "Bitter",
+        "Lora",
+        "Playfair Display",
+        "Fira Code",
+        "Courier Prime",
+        "Source Code Pro",
+        "Playwrite IS",
+        "Fira Sans Condensed",
+        "Saira Condensed"
+      ]
+    },
+    "accentFont": {
+      "required": true,
+      "type": "select",
+      "label": "Accent Font",
+      "options": [
+        "Poppins",
+        "Fira Sans",
+        "Montserrat",
+        "Raleway",
+        "Rubik",
+        "Saira",
+        "Blinker",
+        "Bitter",
+        "Lora",
+        "Playfair Display",
+        "Fira Code",
+        "Courier Prime",
+        "Source Code Pro",
+        "Playwrite IS",
+        "Fira Sans Condensed",
+        "Saira Condensed"
+      ]
+    },
+    "detailFont": {
+      "required": true,
+      "type": "select",
+      "label": "Details Font",
+      "options": [
+        "Poppins",
+        "Fira Sans",
+        "Montserrat",
+        "Raleway",
+        "Rubik",
+        "Saira",
+        "Blinker",
+        "Bitter",
+        "Lora",
+        "Playfair Display",
+        "Fira Code",
+        "Courier Prime",
+        "Source Code Pro",
+        "Playwrite IS",
+        "Fira Sans Condensed",
+        "Saira Condensed"
+      ]
+    },
+    "fullNameFont": {
+      "required": true,
+      "type": "select",
+      "label": "Full Name Font",
+      "options": [
+        "Poppins",
+        "Fira Sans",
+        "Montserrat",
+        "Raleway",
+        "Rubik",
+        "Saira",
+        "Blinker",
+        "Bitter",
+        "Lora",
+        "Playfair Display",
+        "Fira Code",
+        "Courier Prime",
+        "Source Code Pro",
+        "Playwrite IS",
+        "Fira Sans Condensed",
+        "Saira Condensed"
+      ]
+    },
+    "titleFont": {
+      "required": true,
+      "type": "select",
+      "label": "Professional Title Font",
+      "options": [
+        "Poppins",
+        "Fira Sans",
+        "Montserrat",
+        "Raleway",
+        "Rubik",
+        "Saira",
+        "Blinker",
+        "Bitter",
+        "Lora",
+        "Playfair Display",
+        "Fira Code",
+        "Courier Prime",
+        "Source Code Pro",
+        "Playwrite IS",
+        "Fira Sans Condensed",
+        "Saira Condensed"
+      ]
+    },
+    "accentColor": {
+      "required": false,
+      "type": "color",
+      "label": "Accent Color"
+    },
+    "headingColor": {
+      "required": false,
+      "type": "color",
+      "label": "Headings Color"
+    },
+    "detailColor": {
+      "required": false,
+      "type": "color",
+      "label": "Details Color"
+    },
+    "textColor": {
+      "required": false,
+      "type": "color",
+      "label": "Text Color"
+    },
+    "mainFontsize": {
+      "label": "Subtext Fontsize",
+      "required": false,
+      "type": "range",
+      "min": 1.5,
+      "max": 5,
+      "step": 0.05
+    },
+    "headingsFontsize": {
+      "label": "Headings Fontsize",
+      "required": false,
+      "type": "range",
+      "min": 1.5,
+      "max": 5,
+      "step": 0.05
+    },
+    "accentFontsize": {
+      "label": "Accent Fontsize",
+      "required": false,
+      "type": "range",
+      "min": 1.5,
+      "max": 5,
+      "step": 0.05
+    },
+    "detailsFontsize": {
+      "label": "Details Fontsize",
+      "required": false,
+      "type": "range",
+      "min": 1.5,
+      "max": 5,
+      "step": 0.05
+    },
+    "fullnameFontsize": {
+      "label": "Full Name Fontsize",
+      "required": false,
+      "type": "range",
+      "min": 1.5,
+      "max": 15,
+      "step": 0.05
+    },
+    "titleFontsize": {
+      "label": "Professional Title Fontsize",
+      "required": false,
+      "type": "range",
+      "min": 1.5,
+      "max": 5,
+      "step": 0.05
+    },
+    "aboutMeFontsize": {
+      "label": "About Me Fontsize",
+      "required": false,
+      "type": "range",
+      "min": 1.5,
+      "max": 5,
+      "step": 0.05
+    },
+    "contactsFontsize": {
+      "label": "Contacts Fontsize",
+      "required": false,
+      "type": "range",
+      "min": 1.5,
+      "max": 5,
+      "step": 0.05
+    },
+    "lineHeight": {
+      "label": "Line Height",
+      "required": false,
+      "type": "range",
+      "min": 1,
+      "max": 2,
+      "step": 0.05
+    },
+    "headingsLineHeight": {
+      "label": "Headings Line Height",
+      "required": false,
+      "type": "range",
+      "min": 1,
+      "max": 2,
+      "step": 0.05
+    },
+    "fullnameLineHeight": {
+      "label": "Full Name Line Height",
+      "required": false,
+      "type": "range",
+      "min": 0.5,
+      "max": 2,
+      "step": 0.05
+    },
+    "titleLineHeight": {
+      "label": "Professional Title Line Height",
+      "required": false,
+      "type": "range",
+      "min": 1,
+      "max": 3,
+      "step": 0.05
+    },
+    "photoWidth": {
+      "label": "Photo width",
+      "required": false,
+      "type": "range",
+      "min": 15,
+      "max": 50,
+      "step": 1
+    },
+    "photoRadius": {
+      "label": "Photo border radius",
+      "required": false,
+      "type": "range",
+      "min": 0,
+      "max": 25,
+      "step": 0.05
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.edit-panel {
+  background-color: var(--editor-bg-col);
+  padding: var(--editor-padding);
+  padding-bottom: calc(
+    2 * (var(--page-padding-ud) + var(--round-btn-double-padding)) +
+      var(--round-btn-size)
+  );
+  z-index: 1;
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-panel h2 {
+  display: none;
+  font-family: var(--h2-font);
+  font-size: var(--h2-fontsize);
+  font-weight: bold;
+}
+
+.edit-panel .edit-panel-buttons {
+  /* put this above the section panels (to better handling shadows) */
+  z-index: 1;
+  margin: 0 var(--editor-section-padding-lr);
+
+  display: flex;
+}
+
+.edit-panel .edit-panel-button {
+  --button-col: var(--col-txt);
+  --button-bg-col: var(--editor-section-button-color);
+  --button-col-hover: var(--edit-section-highlight-color-secondary);
+  --button-bg-col-hover: var(--editor-section-button-color-secondary);
+  --button-padding: var(--editor-section-button-padding);
+  --button-radius: var(--editor-form-gap) var(--editor-form-gap) 0 0;
+  --button-size: var(--editor-section-button-icon-size);
+  --button-shadow: var(--box-shadow);
+
+  flex: 0 0 1;
+  min-width: 0;
+
+  /* hide shadow below the bitton */
+  --len: calc(-1 * var(--box-shadow-size));
+  clip-path: inset(var(--len) var(--len) 0px var(--len));
+}
+
+.edit-panel .edit-panel-button.current {
+  background-color: var(--editor-section-bg-col) !important;
+  color: var(--edit-section-highlight-color);
+  pointer-events: none;
+}

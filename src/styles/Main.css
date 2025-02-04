@@ -1,0 +1,97 @@
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  min-height: 0;
+}
+
+main.preview-view {
+  --main-translate: -100%;
+}
+
+main .preview-panel {
+  flex: 1;
+  min-height: 0;
+}
+
+/* Modify layout when base layout has overflow */
+
+main.has-overflow-y .edit-panel,
+main.has-overflow-y .preview-panel {
+  min-width: 100vw;
+}
+
+main.has-overflow-y .edit-panel {
+  padding-right: var(--editor-padding-ud);
+}
+
+main.has-overflow-y .edit-panel,
+main.has-overflow-y .preview-panel {
+  transition: transform 0.5s;
+  transform: translateX(var(--main-translate));
+}
+
+/* tablet or larger, or landscape (vs portrait), 641px (phone), 961px (tablet) */
+@media only screen and (min-width: 768px) {
+  main.has-overflow-y .edit-section-panel {
+    max-width: 80vw;
+  }
+}
+
+main.has-overflow-y .preview-page {
+  /* note: this assumes .preview-page has no siblings */
+  --var: calc((100vw - 2 * var(--preview-padding-lr)) / var(--preview-page-ar));
+  max-height: var(--var);
+}
+
+main .group-of-btns {
+  position: fixed;
+  /* left: 0; */
+  right: 0;
+  bottom: 1em;
+  width: 100dvw;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-end;
+  padding: var(--page-padding-ud);
+  gap: 0.5em;
+}
+
+/* main.has-overflow-y .group-of-btns {*/
+/* incude scrollbar size*/
+/*  padding-bottom: calc(var(--page-padding-ud) + 4px); 
+} */
+
+main .functionality-btn {
+  --button-col: var(--round-btn-color);
+  --button-bg-col: var(--round-btn-bg-color);
+  --button-opacity: var(--round-btn-opacity);
+  --button-padding: var(--round-btn-double-padding);
+  --button-radius: 50%;
+  --button-size: var(--round-btn-size);
+}
+
+main .group-of-btns .toggle-preview-view-btn {
+  margin-right: auto;
+}
+
+/* some functionality buttons are shown only on hover */
+
+main .functionality-btn.normally-hidden {
+  transform: scale(0.7);
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.25s, opacity 0.25s;
+}
+
+main .group-of-btns:hover .functionality-btn.normally-hidden {
+  visibility: visible;
+  opacity: var(--round-btn-opacity);
+}
+
+main .group-of-btns:hover .functionality-btn.normally-hidden {
+  visibility: visible;
+  opacity: var(--round-btn-opacity);
+}

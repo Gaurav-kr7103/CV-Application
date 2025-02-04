@@ -1,0 +1,145 @@
+header {
+  background-color: var(--header-bg-col);
+  padding: var(--header-padding);
+  box-shadow: var(--box-shadow);
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5em;
+}
+
+header h1 {
+  font-size: var(--h1-fontsize);
+  font-family: var(--h1-font);
+  font-weight: bold;
+  color: var(--h1-color);
+  flex: 1;
+}
+
+header .group-of-btns {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5em;
+}
+
+header .functionality-btn {
+  --button-col: var(--header-btn-col);
+  --button-bg-col: var(--header-btn-bg-col);
+  --button-opacity: var(--round-btn-opacity);
+  --button-padding: var(--round-btn-padding);
+  --button-radius: 0;
+  --button-size: var(--round-btn-size);
+}
+header .functionality-btn:focus-visible {
+  --button-radius: 50%;
+}
+header .dark-theme-btn {
+  --button-col-hover: var(--dark-theme-btn-hightlight-col);
+  --button-bg-col-hover: var(--dark-theme-btn-hightlight-bg-col);
+  --button-shadow-hover: 0 0px var(--box-shadow-blur) var(--box-shadow-spread)
+    var(--dark-theme-btn-hightlight-box-shadow-col) inset;
+  --button-radius: 50%;
+}
+
+header .drop-down-menu-btn {
+  --button-col: var(--header-btn-col);
+  --button-bg-col: var(--header-btn-bg-col);
+  --button-opacity: var(--round-btn-opacity);
+  --button-padding: var(--round-btn-padding);
+  --button-radius: 50%;
+  --button-size: var(--round-btn-size);
+
+  --button-shadow-hover: none;
+}
+
+header .drop-down-menu-items {
+  --drop-down-menu-items-top: calc(
+    var(--header-padding-ud) + 2 * var(--round-btn-padding) +
+      var(--round-btn-size)
+  );
+  --drop-down-menu-items-left: calc(-1 * var(--header-padding-lr));
+  --drop-down-menu-items-radius: 0;
+  --drop-down-menu-items-radius-br: 0;
+  --drop-down-menu-items-width: 100dvw;
+  --drop-down-menu-items-space-height: 1em;
+  --drop-down-menu-items-opacity: 0.9;
+
+  --len: calc(-1 * var(--box-shadow-size));
+  clip-path: inset(0px var(--len) var(--len) var(--len));
+  overflow: hidden auto;
+  max-height: calc(
+    100dvh - var(--drop-down-menu-items-top) - var(--header-padding-ud)
+  );
+}
+
+/* add inset shadow only on the top of the .drop-down-menu-items div*/
+header .drop-down-menu-items::before {
+  content: "";
+  width: 100%;
+  height: var(--box-shadow-size);
+  position: absolute;
+  top: calc(-1 * var(--box-shadow-size));
+  z-index: 1;
+  --box-shadow-color: var(--col-dark-1);
+  box-shadow: 0 0px var(--box-shadow-blur) var(--box-shadow-spread)
+    var(--box-shadow-color);
+}
+
+header .drop-down-menu-items button {
+  --button-col: var(--col-txt-alt);
+  --button-bg-col: var(--header-dropdown-bg-col);
+  --button-opacity: var(--drop-down-menu-items-opacity);
+  --button-padding: var(--round-btn-padding) var(--round-btn-double-padding);
+  --button-size: 1em;
+  --button-gap: 0.5em;
+}
+
+header .drop-down-menu-items button:hover {
+  font-weight: 600;
+}
+
+header .drop-down-menu-items div.space {
+  height: var(--drop-down-menu-items-space-height);
+  background-color: var(--header-dropdown-bg-col);
+  opacity: var(--drop-down-menu-items-opacity);
+}
+
+header .drop-down-menu-items div.separator {
+  --drop-down-menu-items-separator-height: 2px;
+  --drop-down-menu-items-separator-padding: 0.5em;
+
+  box-sizing: content-box;
+  height: var(--drop-down-menu-items-separator-height);
+  padding: var(--drop-down-menu-items-separator-padding);
+  /* background-color: var(--header-dropdown-bg-col); */
+  opacity: var(--drop-down-menu-items-opacity);
+
+  background-image: linear-gradient(
+      to bottom,
+      var(--col-txt-alt) 0%,
+      var(--col-txt-alt) 100%
+    ),
+    linear-gradient(
+      to bottom,
+      var(--header-dropdown-bg-col) 0%,
+      var(--header-dropdown-bg-col) 100%
+    );
+  background-clip: content-box, padding-box;
+}
+
+/* tablet or larger, or landscape (vs portrait), 641px (phone), 961px (tablet) */
+@media only screen and (min-width: 512px) {
+  header .drop-down-menu-items {
+    --drop-down-menu-items-radius-br: var(--button-border-radius);
+    --drop-down-menu-items-width: 50dvw;
+  }
+
+  @media only screen and (min-width: 1048px) {
+    header .drop-down-menu-items {
+      --drop-down-menu-items-radius-br: var(--button-border-radius);
+      --drop-down-menu-items-width: 25dvw;
+    }
+  }
+}

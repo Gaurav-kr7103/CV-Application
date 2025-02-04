@@ -1,0 +1,73 @@
+.preview-item-with-dates {
+  display: grid;
+  grid-template-areas:
+    "role dates"
+    "where where"
+    "other other";
+
+  grid-template-columns: 1fr 1fr;
+  align-items: baseline;
+
+  font-size: var(--preview-page-main-fontsize);
+}
+
+.preview-item-with-dates .role,
+.preview-item-with-dates .degree,
+.preview-item-with-dates .name {
+  grid-area: role;
+  font-weight: 600;
+  color: var(--preview-page-accent-color);
+  font-family: var(--preview-page-accent-font);
+  font-size: var(--preview-page-accent-fontsize);
+}
+
+.preview-item-with-dates .dates {
+  grid-area: dates;
+  color: var(--preview-page-details-color);
+  font-family: var(--preview-page-details-font);
+  font-size: var(--preview-page-details-fontsize);
+  padding-left: min(3em, 5cqw);
+  text-align: right;
+}
+
+.preview-item-with-dates .institution-address,
+.preview-item-with-dates .issuer-address {
+  grid-area: where;
+}
+
+.preview-item-with-dates .institution,
+.preview-item-with-dates .issuer {
+  font-weight: 500;
+  /* font-style: italic; */
+  color: var(--preview-page-details-color);
+  font-family: var(--preview-page-details-font);
+  font-size: var(--preview-page-details-fontsize);
+  display: inline;
+}
+
+.preview-item-with-dates .address::before {
+  content: ", ";
+  color: var(--preview-page-details-color);
+  font-family: var(--preview-page-details-font);
+  font-size: var(--preview-page-details-fontsize);
+}
+
+.preview-item-with-dates .address {
+  /* font-style: italic; */
+  color: var(--preview-page-details-color);
+  font-family: var(--preview-page-details-font);
+  font-size: var(--preview-page-details-fontsize);
+  display: inline;
+}
+
+.preview-item-with-dates > .other-info,
+.preview-item-with-dates > .description {
+  grid-area: other;
+  color: var(--preview-page-text-color);
+  padding-top: var(--preview-page-section-list-gap);
+}
+
+.preview-item-with-dates .description {
+  /* padding-left: var(--preview-page-section-list-gap); */
+  padding-left: var(--preview-page-item-list-padding-left);
+}

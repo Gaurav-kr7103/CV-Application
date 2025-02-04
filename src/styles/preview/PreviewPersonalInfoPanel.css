@@ -1,0 +1,106 @@
+.preview-personal-info-panel {
+  display: grid;
+  grid-template-areas:
+    "contacts contacts contacts contacts"
+    ". photo fullName ."
+    ". photo title ."
+    ". photo . ."
+    ". photo aboutMe ."
+    ". photo . .";
+  grid-template-columns: var(--preview-page-lr-padding) min-content 1fr var(
+      --preview-page-lr-padding
+    );
+  /* grid-auto-rows: auto; */
+  grid-template-rows:
+    min-content min-content min-content 1fr
+    min-content 4fr;
+
+  --preview-page-gap-tb: max(
+    var(--preview-page-gap),
+    var(--preview-page-personal-info-gap),
+    var(--preview-page-section-items-gap),
+    var(--preview-page-section-list-gap)
+  );
+}
+
+.preview-personal-info-panel h3 {
+  display: none;
+}
+
+.preview-personal-info-panel .contact-list {
+  grid-area: contacts;
+
+  background-color: var(--preview-page-accent-color);
+  color: var(--preview-page-bg-col);
+  font-family: var(--preview-page-details-font);
+
+  font-size: var(--preview-page-contacts-fontsize);
+  line-height: 1;
+  padding: var(--preview-page-contacts-tb-padding)
+    var(--preview-page-contacts-lr-padding);
+
+  display: grid;
+  grid-template-columns: repeat(var(--preview-page-contacts-cols), max-content);
+  grid-auto-rows: auto;
+  gap: var(--preview-page-contacts-v-gap) var(--preview-page-contacts-h-gap);
+  justify-content: space-around;
+
+  overflow: hidden;
+}
+
+.preview-personal-info-panel .photo {
+  grid-area: photo;
+  width: min-content;
+  height: 100%;
+  max-height: 100%;
+  padding-top: var(--preview-page-gap-tb);
+  padding-right: var(--preview-page-personal-info-gap);
+  padding-bottom: var(--preview-page-gap-tb);
+  overflow: hidden;
+}
+
+.preview-personal-info-panel .photo-img {
+  height: 100%;
+  /* height: auto; */
+  width: var(--preview-page-photo-width);
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: var(--preview-page-photo-radius);
+}
+
+.preview-personal-info-panel .full-name {
+  grid-area: fullName;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: var(--preview-page-gap-tb);
+  font-family: var(--preview-page-full-name-font);
+  line-height: var(--preview-page-full-name-lineheight);
+}
+
+.preview-personal-info-panel .text.surname {
+  font-weight: 500;
+  font-size: var(--preview-page-full-name-fontsize);
+  color: var(--preview-page-headings-color);
+}
+
+.preview-personal-info-panel .text.name {
+  font-weight: 700;
+  font-size: var(--preview-page-full-name-fontsize);
+  color: var(--preview-page-accent-color);
+  padding-right: 0.1em;
+}
+
+.preview-personal-info-panel .text.title {
+  grid-area: title;
+  font-size: var(--preview-page-title-fontsize);
+  color: var(--preview-page-details-color);
+  font-family: var(--preview-page-title-font);
+  line-height: var(--preview-page-title-lineheight);
+}
+
+.preview-personal-info-panel .text.aboutMe {
+  grid-area: aboutMe;
+  padding: var(--preview-page-personal-info-gap) 0 var(--preview-page-gap-tb);
+  font-size: var(--preview-page-about-me-fontsize);
+  color: var(--preview-page-text-color);
+}

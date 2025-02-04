@@ -1,0 +1,97 @@
+.preview-page {
+  background-color: var(--preview-page-bg-col);
+  box-shadow: var(--box-shadow);
+
+  height: 100%;
+  padding: 0 0 var(--preview-page-tb-padding);
+  aspect-ratio: var(--preview-page-ar);
+  overflow: hidden auto;
+
+  container-type: inline-size;
+  container-name: preview-page;
+
+  font-family: var(--preview-page-main-font);
+  letter-spacing: -0.0005em; /* fix for letter spacing when using jsPdf */
+  line-height: var(--preview-page-lineheight);
+}
+
+/* show top/bottom padding when not saving pdf (otherwise, this is already included when saving into pdf) */
+.preview-page.printing {
+  height: auto;
+  max-height: none;
+  padding: 0;
+  aspect-ratio: auto;
+  overflow: hidden visible;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* hide scrollbars when saving pdf*/
+.preview-page.printing::-webkit-scrollbar {
+  display: none;
+}
+
+/* --- PRINT STYLES --------------------------------- */
+@page {
+  size: var(--preview-page-format);
+  margin: var(--preview-page-tb-padding) 0;
+}
+
+/* remove the top margin on the first page only */
+@page :first {
+  margin-top: 0px;
+}
+
+@media print {
+  html,
+  body,
+  body * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    visibility: hidden;
+  }
+
+  .print-btn {
+    visibility: hidden !important;
+  }
+
+  /* hide scrollbars when saving pdf*/
+  .preview-page::-webkit-scrollbar {
+    display: none;
+  }
+
+  .preview-page,
+  .preview-page * {
+    visibility: visible;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .preview-page {
+    margin: 0;
+    padding: 0 !important;
+    box-shadow: none !important;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    overflow: visible !important;
+  }
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+div,
+span,
+img,
+svg,
+li {
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+/* ------------------------------------------------- */

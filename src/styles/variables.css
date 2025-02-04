@@ -1,0 +1,256 @@
+:root {
+  /* Font family */
+  --main-font: "Blinker", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --h1-font: "Blinker", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --h2-font: "Blinker", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --h3-font: "Blinker", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  /* Colors (palette)*/
+  --col-light-1: #ffffff; /*white*/
+  --col-light-2: #fcf6f0;
+  --col-light-3: #ebe4dd;
+  --col-light-4: #c9c3bb;
+
+  --col-dark-1: #131c28; /*black*/
+  --col-dark-2: #353b44;
+  --col-dark-3: #595c61;
+  --col-dark-4: #808080;
+
+  --col-light-accent-1: #01615f;
+  --col-light-accent-2: #188f8b;
+
+  --col-dark-accent-1: #d4aa3a;
+  --col-dark-accent-2: #dcbf57;
+
+  /* light-theme */
+  --col-accent-1: var(--col-light-accent-1);
+  --col-accent-2: var(--col-light-accent-2);
+
+  /* Colors (background)*/
+  --bg-col: var(--col-light-3);
+  --header-bg-col: var(--col-accent-2);
+  --header-dropdown-bg-col: var(--col-accent-1);
+
+  --editor-bg-col: var(--col-light-3);
+  --editor-section-bg-col: var(--col-light-2);
+
+  --preview-bg-col: var(--col-light-3);
+
+  --input-bg-color: var(--col-light-1);
+  --input-color-focus: var(--col-accent-2);
+  --input-color-hover: var(--col-accent-1);
+  --input-color-required: var(--col-accent-1);
+  --input-font-weight: 300;
+
+  --round-btn-bg-color: var(--col-accent-2);
+
+  /* Colors (text/icons)*/
+  --col-txt: var(--col-dark-1);
+  --col-txt-alt: var(--col-light-1);
+  --col-txt-secondary: var(--col-dark-4);
+
+  --h1-color: var(--col-dark-1);
+
+  --input-color: var(--col-txt);
+  --input-placeholder-color: var(--col-txt-secondary);
+  --label-color: var(--col-dark-2);
+  --edit-section-highlight-color: var(--col-accent-1);
+  --edit-section-highlight-color-secondary: var(--col-accent-2);
+
+  --editor-section-button-color: var(--col-light-4);
+  --editor-section-button-color-secondary: var(--col-light-3);
+
+  --round-btn-color: var(--col-txt-alt);
+
+  --disabled-button-opacity: 0.5;
+  --round-btn-opacity: 0.8;
+
+  /* Font sizes */
+  --txt-fontsize: max(18px, 1vmin);
+  --txt-lineheight: 1.2;
+
+  --h1-fontsize: min(2rem, 5vw);
+  --h2-fontsize: 2rem;
+  --h3-fontsize: 1.1rem;
+  --label-fontsize: 0.7rem;
+  --input-fontsize: 1rem;
+
+  /* --icons-size: calc(var(--h3-fontsize) * var(--txt-lineheight)); */
+
+  /* Maximum width (including dashboard margin) */
+  /* --max-width: min(1440px, 100%); */
+
+  /*Margins, gaps and paddings (+widths)*/
+  --page-padding-lr: min(3vw, 1.5rem);
+  --page-padding-ud: 1rem;
+  --page-padding: var(--page-padding-ud) var(--page-padding-lr);
+
+  --header-padding-ud: min(2vw, 0.5rem);
+  --header-padding-lr: var(--page-padding-lr);
+  --header-padding: var(--header-padding-ud) var(--header-padding-lr);
+
+  --editor-padding-ud: var(--page-padding-ud);
+  --editor-padding: var(--editor-padding-ud) 0;
+
+  --editor-section-padding-lr: var(--page-padding-lr);
+  --editor-section-padding: var(--page-padding);
+  --editor-section-gap: 1rem;
+  --editor-form-padding: 1rem;
+  --editor-form-gap: 0.5rem;
+  --editor-form-divider-height: 1.1em;
+  --editor-section-button-icon-size: 1em;
+  --editor-section-button-icon-larger-size: 1.5em;
+  --editor-section-button-padding-tb: min(2%, 0.4em);
+  --editor-section-button-padding: var(--editor-section-button-padding-tb)
+    min(4%, 0.8em);
+  --editor-section-button-icon-new-item-padding: 0.5em;
+  --editor-section-button-item-padding: 0.3em 0.5em;
+  --editor-section-button-item-gap: 0.5em;
+  --editor-section-button-item-gap-small: 0.1em;
+  --editor-section-button-new-item-padding: 0.5em;
+  --editor-section-button-item-min-width: 3em;
+  --editor-section-button-small-padding: 0.3em;
+
+  --input-padding-tb: 2px;
+  --input-padding: var(--input-padding-tb) 4px;
+  --label-input-gap: 0.5em;
+  --label-width: 6em;
+
+  --preview-padding-lr: var(--page-padding-lr);
+  --preview-padding: var(--page-padding);
+
+  --round-btn-padding: 0.5rem;
+  --round-btn-double-padding: 1rem;
+  --round-btn-size: 1.5rem;
+
+  /* Radius / borders */
+  --button-border-radius: 8px;
+  --input-border-radius: 5px;
+  --input-border-size: 1px;
+  --input-border-delta: 2px;
+  --input-border: var(--input-border-size) solid var(--col-dark-4);
+  --input-border-size-plus-delta: calc(
+    var(--input-border-size) + var(--input-border-delta)
+  );
+
+  --textarea-rows: 6;
+
+  --button-small-outline-size: 1px;
+  --button-large-outline-size: 3px;
+
+  /* Preview page -------------------------------------------------- */
+  --preview-page-bg-col: white;
+  /* --a4-ar: calc(1 / 1.41421); */
+  /* --preview-page-format: "A4" */
+  /* --preview-page-ar: var(--a4-ar); */
+  /* --preview-page-tb-padding: 10cqw; */
+  /* --preview-page-lr-padding: 5cqw; */
+  /* --preview-page-gap: 2cqw; */
+  /* --preview-page-personal-info-gap: 3cqw; */
+
+  /* --preview-page-accent-color: rgb(158, 11, 114); */
+
+  /* --preview-page-headings-color: var(--col-dark-1);
+  --preview-page-details-color: var(--col-dark-3);
+  --preview-page-text-color: var(--col-dark-4); */
+
+  /* --preview-page-contacts-tb-padding: 2cqw; */
+  /* --preview-page-contacts-lr-padding: 2cqw; */
+  /* --preview-page-contacts-fontsize: 1.5cqw; */
+  /* --preview-page-contacts-v-gap: 0.5em; */
+  --preview-page-contacts-h-gap: 1em;
+
+  /* --preview-page-full-name-fontsize: 7cqw; */
+
+  /* --preview-page-title-fontsize: 3cqw; */
+  /* --preview-page-headings-fontsize: 3.5cqw; */
+  /* --preview-page-about-me-fontsize: 2.5cqw; */
+
+  /* --preview-page-main-fontsize: 2.5cqw; */
+  /* --preview-page-accent-fontsize: 3cqw; */
+  /* --preview-page-details-fontsize: 3cqw; */
+
+  --preview-page-item-list-padding-left: 1.8em;
+  /* --preview-page-section-list-gap: 0.25em; */
+  /* --preview-page-section-items-gap: 0.5em; */
+
+  /* --preview-page-headings-font: "Saira";
+  --preview-page-details-font: "Fira Sans";
+  --preview-page-accent-font: "Poppins";
+  --preview-page-full-name-font: "Bitter";
+  --preview-page-title-font: "Playwrite IS"; */
+
+  --preview-page-contacts-cols: 3;
+  /* --preview-page-photo-width: 30cqw; */
+  /* --preview-page-photo-radius: 1cqw; */
+
+  /* --preview-page-lineheight: 1.2; */
+  /* --preview-page-headings-lineheight: 1; */
+  --preview-page-full-name-lineheight: 0.8;
+  --preview-page-title-lineheight: 1.2;
+
+  /**************************************************************************/
+
+  /* --box-radius: max(6px, 0.9vmin); */
+
+  /* Shadows */
+  /* --txt-shadow: 0 3px 6px var(--col-black);*/
+  --box-shadow-blur: 10px;
+  --box-shadow-spread: 0px;
+  --box-shadow-color: var(--col-dark-4);
+  --box-shadow-size: calc(var(--box-shadow-blur) + var(--box-shadow-spread));
+  --box-shadow: 0 0px var(--box-shadow-blur) var(--box-shadow-spread)
+    var(--box-shadow-color);
+  --input-shadow: 0 0 4px var(--box-shadow-color);
+
+  --max-shadow-outline-size: max(
+    var(--box-shadow-size),
+    var(--button-small-outline-size),
+    var(--button-large-outline-size)
+  );
+
+  --header-btn-bg-col: transparent;
+  --header-btn-col: var(--col-light-1);
+  --dark-theme-btn-hightlight-bg-col: var(--col-dark-2);
+  --dark-theme-btn-hightlight-col: var(--col-dark-accent-2);
+  --dark-theme-btn-hightlight-box-shadow-col: black;
+
+  /* Animations on hover / active / ...*/
+  /* --transition-time: 0.8s; */
+}
+
+:root:has(.dark-theme) {
+  /* dark-theme */
+  --col-accent-1: var(--col-dark-accent-1);
+  --col-accent-2: var(--col-dark-accent-2);
+
+  /* Colors (background)*/
+  --bg-col: var(--col-dark-1);
+  --header-bg-col: var(--col-dark-2);
+  --header-dropdown-bg-col: var(--col-accent-2);
+
+  --editor-bg-col: var(--col-dark-1);
+  --editor-section-bg-col: var(--col-dark-2);
+
+  --preview-bg-col: var(--col-dark-1);
+
+  --input-bg-color: var(--col-dark-3);
+  --input-font-weight: 300;
+
+  /* Colors (text/icons)*/
+  --col-txt: var(--col-light-2);
+  --col-txt-alt: var(--col-dark-1);
+  --col-txt-secondary: var(--col-light-4);
+
+  --h1-color: var(--col-accent-2);
+  --label-color: var(--col-light-3);
+
+  --editor-section-button-color: var(--col-dark-3);
+  --editor-section-button-color-secondary: var(--col-dark-4);
+
+  --box-shadow-color: black;
+
+  --dark-theme-btn-hightlight-bg-col: var(--col-light-1);
+  --dark-theme-btn-hightlight-col: var(--col-light-accent-2);
+  --dark-theme-btn-hightlight-box-shadow-col: var(--col-dark-4);
+}

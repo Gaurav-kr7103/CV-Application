@@ -1,0 +1,87 @@
+.edit-list-selection-buttons {
+  display: flex;
+  align-items: center;
+  gap: calc(2 * var(--editor-section-button-item-gap));
+  width: 100%;
+  min-width: 0;
+}
+
+.edit-list-selection-buttons:not(form .edit-list-selection-buttons) {
+  max-height: 30%;
+}
+
+.edit-list-selection-items-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--editor-section-button-item-gap);
+  flex: 1;
+
+  max-height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  padding: var(--max-shadow-outline-size);
+}
+
+.edit-list-selection-items-buttons p {
+  width: 100%;
+  text-align: left;
+  padding: var(--editor-section-button-item-padding);
+  font-style: italic;
+  line-height: 1;
+  color: var(--col-txt-secondary);
+}
+
+.edit-list-selection-new-item-button {
+  --button-col: var(--col-txt-alt);
+  --button-bg-col: var(--edit-section-highlight-color-secondary);
+  --button-bg-col-hover: var(--edit-section-highlight-color);
+  --button-padding: var(--editor-section-button-new-item-padding);
+  --button-radius: 50%;
+  --button-size: var(--editor-section-button-icon-larger-size);
+
+  align-self: flex-start;
+  aspect-ratio: 1;
+  min-height: 0;
+}
+
+.edit-list-selection-item-button {
+  --button-col: var(--col-txt);
+  --button-col-hover: var(--edit-section-highlight-color-secondary);
+  --button-bg-col: var(--editor-section-button-color);
+  --button-bg-col-hover: var(--editor-section-button-color-secondary);
+  --button-padding: var(--editor-section-button-item-padding);
+  --button-radius: var(--button-border-radius);
+
+  line-height: 1;
+  min-width: var(--editor-section-button-item-min-width);
+
+  /* https://stackoverflow.com/questions/7993067/text-overflow-ellipsis-not-working */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: min(100%, 15em);
+  display: block;
+  overflow: hidden;
+}
+
+.edit-list-selection-new-item-button.current {
+  background-color: var(--edit-section-highlight-color-secondary);
+  outline: none;
+  opacity: var(--disabled-button-opacity);
+  pointer-events: none;
+}
+
+.edit-list-selection-item-button.current {
+  background-color: var(--edit-section-highlight-color);
+  color: var(--col-txt-alt);
+
+  /* see: https://www.sitepoint.com/quick-tip-fixing-font-weight-problem-hover-states/ */
+  /* font-weight: bold; */
+  text-shadow: 0 0 0.9px var(--col-txt-alt), 0 0 0.9px var(--col-txt-alt),
+    0 0 0.9px var(--col-txt-alt);
+
+  /* outline: var(--button-large-outline-size) solid
+    var(--edit-section-highlight-color); */
+  pointer-events: none;
+  /* outline: none; */
+}
